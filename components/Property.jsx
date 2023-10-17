@@ -38,6 +38,22 @@ const Property = ({
             height={260}
           />
         </Box>
+        <Box w="full">
+          <Flex
+            paddingTop="2"
+            alignItems="center"
+            justifyContent="space-between"
+          >
+            <Flex alignItems="center">
+              <Box paddingRight="3" color="green.400">
+                {isVerified && <GoVerified />}
+              </Box>
+              <Text fontWeight="bold" fontSize="lg">
+                AED {price} {rentFrequency && `/$rentFrequency`}
+              </Text>
+            </Flex>
+          </Flex>
+        </Box>
       </Flex>
     </Link>
   );
