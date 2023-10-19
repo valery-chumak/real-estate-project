@@ -20,15 +20,18 @@ const SearchFilters = (filterValues) => {
 
   const searchProperties = (filterValues) => {
     const path = router.pathname;
+
     const { query } = router;
+
     const values = getFilterValues(filterValues);
 
     values.forEach((item) => {
       query[item.name] = item.value;
     });
-    console.log(values);
+
     router.push({ pathname: path, query: query });
   };
+
   return (
     <Flex bg="gray.100" p="4" justifyContent="center" flexWrap="wrap">
       {filters.map((filter) => (
