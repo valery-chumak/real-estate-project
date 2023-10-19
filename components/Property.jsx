@@ -56,7 +56,11 @@ const Property = ({
             </Flex>
 
             <Box>
-              <Avatar size="sm" src={agency?.logo?.url} />
+              <Avatar
+                size="sm"
+                border="1px solid gray"
+                src={agency?.logo?.url}
+              />
             </Box>
           </Flex>
 
